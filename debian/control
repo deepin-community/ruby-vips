@@ -1,0 +1,33 @@
+Source: ruby-vips
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Jongmin Kim <jmkim@pukyong.ac.kr>,
+           Utkarsh Gupta <utkarsh@debian.org>
+Section: ruby
+Testsuite: autopkgtest-pkg-ruby
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               libglib2.0-dev,
+               libvips-dev,
+               ruby-ffi,
+               ruby-rspec
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-vips
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-vips.git
+Homepage: https://github.com/jcupitt/ruby-vips
+Rules-Requires-Root: no
+XS-Ruby-Versions: all
+XB-Ruby-Versions: ${ruby:Versions}
+
+Package: ruby-vips
+Architecture: all
+Depends: ruby | ruby-interpreter,
+         libglib2.0-dev,
+         libvips-dev,
+         ruby-ffi,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Ruby extension for the vips image processing library
+ This package provides a binding for the vips image processing library.
+ It is extremely fast and it can process huge images without loading the
+ whole image in memory.

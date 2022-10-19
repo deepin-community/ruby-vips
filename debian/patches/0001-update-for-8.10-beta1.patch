@@ -1,0 +1,37 @@
+From: Sergio Durigan Junior <sergiodj@debian.org>
+Date: Fri, 5 Nov 2021 17:16:02 -0400
+Subject: update for 8.10-beta1
+
+and update proc capture in signal_connect
+
+Origin: backport, https://github.com/libvips/ruby-vips/commit/e0203e9ed8be27ed195b4c5b0ca87c35daff36cc
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=996522
+Applied-Upstream: v2.1.0
+---
+ lib/vips/object.rb | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/lib/vips/object.rb b/lib/vips/object.rb
+index e7523ae..b536f42 100644
+--- a/lib/vips/object.rb
++++ b/lib/vips/object.rb
+@@ -260,15 +260,15 @@ module Vips
+       gvalue.unset
+     end
+ 
+-    def signal_connect name, handler=nil
++    def signal_connect name, handler=nil, &block
+       marshal = MARSHAL_ALL[name.to_sym]
+       raise Vips::Error, "unsupported signal #{name}" if marshal == nil
+ 
+       if block_given? 
+-        # This will grab any block given to us and make it into a proc
+-        prc = Proc.new
++        # our block as a Proc
++        prc = block
+       elsif handler
+-        # We assume the hander is a proc (perhaps we should test)
++        # We assume the hander is a Proc (perhaps we should test)
+         prc = handler
+       else
+         raise Vips::Error, "must supply either block or handler"

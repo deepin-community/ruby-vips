@@ -1,0 +1,36 @@
+ruby-vips (2.0.17-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * [ci skip] Update team name
+  * [ci skip] Add .gitattributes to keep unwanted files
+    out of the source package
+
+  [ Sergio Durigan Junior ]
+  * d/p/0001-update-for-8.10-beta1.patch: Fix FTBFS with Ruby 3.0.
+    (Closes: #996522)
+
+ -- Sergio Durigan Junior <sergiodj@debian.org>  Fri, 05 Nov 2021 17:20:24 -0400
+
+ruby-vips (2.0.17-2) UNRELEASED; urgency=low
+
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sun, 16 Aug 2020 22:14:31 -0000
+
+ruby-vips (2.0.17-1) unstable; urgency=medium
+
+  * New upstream version 2.0.17
+  * Fix package wrt cme
+  * Add salsa-ci.yml
+  * Drop d/patches
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Tue, 31 Mar 2020 18:26:06 +0530
+
+ruby-vips (2.0.13-1) unstable; urgency=medium
+
+  * Initial release (Closes: #930070)
+
+ -- Jongmin Kim <jmkim@pukyong.ac.kr>  Thu, 06 Jun 2019 23:50:59 +0900
