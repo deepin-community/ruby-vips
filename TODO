@@ -9,7 +9,7 @@
 
 - Lint.
 
-	bundle exec rake rubocop
+	bundle exec standardrb
 
 - Reinstall local copy of gem after a change.
 
@@ -28,12 +28,8 @@
 
 	cd lib/vips
 	ruby > methods.rb
-	require 'vips'; Vips::Yard.generate
+	require "vips"; Vips::Yard.generate
 	^D
-
-- Regenerate `.rubocop_todo.yml`.
-
-	bundle exec rubocop --auto-gen-config
 
 - Regenerate docs.
 
@@ -41,8 +37,8 @@
 
 - Push new gem to rubygems, tag repository with version.
 
+	gem signin --otp 111111 
 	bundle exec rake release
 
-  There's an invisible prompt for the authenticator code. Enter eg. 123456, 
-  press return and the upload should work.
+  The otp is from authy / google authenticator / etc. 
 
