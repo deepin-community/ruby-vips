@@ -1,3 +1,16 @@
+ruby-vips (2.1.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * d/p/0001-update-for-8.10-beta1.patch: removed, applied upstream.
+  * Bump debhelper compat level to 13.
+  * Declare compliance with Debian Policy 4.6.1.
+  * d/p/0001-Fix-SourceCustom-test-failure.patch: fix test failure
+    (Closes: #1017186).
+  * d/control: runtime depend on ${ruby:Depends} instead or ruby-interpreter.
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Thu, 15 Dec 2022 17:33:00 -0300
+
 ruby-vips (2.0.17-3) unstable; urgency=medium
 
   * Team upload.

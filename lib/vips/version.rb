@@ -1,3 +1,3 @@
 module Vips
-  VERSION = "2.0.17"
+  VERSION = "2.1.4"
 end

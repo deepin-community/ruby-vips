@@ -2,6 +2,39 @@
 
 ## master
 
+## Version 2.1.4 (2021-10-28)
+
+* `write_to_buffer` tries to use the new target API, then falls back to the old 
+  buffer system [jcupitt]
+* don't generate yard docs for deprecated args [jcupitt]
+* add hyperbolic trig functions [jcupitt]
+
+## Version 2.1.3 (2021-8-23)
+
+* fix a gtype size error on win64 [danini-the-panini]
+
+## Version 2.1.2 (2021-5-3)
+
+* allow `FFI::Pointer` as an argument to `new_from_memory` etc. [sled]
+
+## Version 2.1.1 (2021-5-3)
+
+* fix "mutate" with libvips 8.9 [jcupitt]
+* update autodocs for libvips 8.11 [jcupitt]
+
+## Version 2.1.0 (2021-3-8)
+
+* add "mutate" system [jcupitt]
+* better behaviour with some nil parameters [jcupitt]
+* revise gemspec [jcupitt]
+* allow symbols for Interpolate.new [noraj]
+* update docs for 8.10, fix minor doc formatting issues [jcupitt]
+* `new_from_array` checks array argument more carefully [dkam]
+* add `new_from_memory` and `new_from_memory_copy` [ankane]
+* jruby added to CI testing [pftg]
+* switch to github actions for CI [pftg]
+* remove rubocop, revise formatting for standardrb [pftg]
+
 ## Version 2.0.17 (2019-10-29)
 
 * install msys2 libvips on Windows [larskanis]
